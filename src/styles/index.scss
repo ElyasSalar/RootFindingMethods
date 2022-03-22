@@ -1,0 +1,11 @@
+// generals
+@import "./_general.scss";
+@import "./colors.scss";
+
+// components
+@import "./components/university-header.scss";
+@import "./components/question-information.scss";
+@import "./components/method-solution.scss";
+
+// pages
+@import "./pages/home.scss";

@@ -1,0 +1,51 @@
+.university-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 10px solid $color-mercury;
+  
+  &__description {
+    padding-inline: 10%;
+    padding-block: 5%;
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-header {
+      font-size: 70px;
+    }
+
+    &-body {
+      margin-top: 20px;
+      font-size: 30px;
+      font-weight: 600;
+    }
+  }
+  
+  &__blue-seprator {
+    flex-basis: 5%;
+    background-color: $color-venice-blue;
+  }
+  
+  &__white-seprator {
+    flex-basis: 3%;
+  }
+
+  &__logo {
+    flex-basis: 37%;
+    padding-inline: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-venice-blue;
+    color: $color-white;
+
+    &-body {
+      @extend .university-header__description-body;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

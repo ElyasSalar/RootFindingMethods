@@ -1,0 +1,47 @@
+@use "sass:color";
+
+.question-information {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  margin-block: 100px;
+  font-size: 30px;
+  grid-template: repeat(4, 100px) / repeat(2, 1fr);
+
+  & > * {
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    font-size: 20px;
+    margin-inline: 30px;
+    flex-grow: 1;
+    border: 1px solid $color-black;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  &__one-column {
+    grid-column: 1 / -1;
+  }
+
+  &__submit-button {
+    width: 70%;
+    height: 70%;
+    font-size: 30px;
+    display: flex;
+    border-radius: 10px;
+    align-self: flex-end;
+    justify-self: center;
+    justify-content: center;
+    color: $color-white;
+    background-color: $color-venice-blue;
+    border: 1px solid $color-black;
+    cursor: pointer;
+
+    &:hover {
+      background-color: color.adjust($color-venice-blue, $lightness: 10%);
+    }
+  }
+}

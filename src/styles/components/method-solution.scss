@@ -1,0 +1,92 @@
+@use "sass:color";
+
+.method-solution {
+  height: 50vh;
+  margin-block: 50px;
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $color-venice-blue;
+  }
+
+  &-plot {
+    margin-inline-end: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px $color-mercury;
+
+    svg .canvas .content .graph circle {
+      r: 3px;
+      stroke: none;
+      fill: $color-venice-blue;
+    }
+  }
+
+  &-table-container {
+    padding: 0 15px 15px;
+    max-height: 100%;
+    max-width: 60%;
+    border-radius: 10px;
+    background-color: $color-mercury;
+    overflow: auto;
+    box-shadow: 0 0 6px $color-mercury;
+    flex-grow: 1;
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 10px;
+    border-collapse: collapse;
+    
+
+    td, th {
+      padding-inline-start: 20px;
+      padding-inline-end: 10px;
+    }
+
+    tr {
+      border-radius: 10px;
+      height: 50px;
+      border-bottom: 2px solid $color-mercury;
+    }
+
+    thead {
+      height: 40px;
+      font-size: 18px;
+      background-color: $color-mercury;
+      position: sticky;
+      top: 0;
+
+      th {
+        text-align: start;
+      }
+    }
+
+    tbody {
+
+      tr {
+        background-color: $color-white;
+
+        &:hover {
+          cursor: pointer;
+          background-color: color.adjust($color-white, $blackness: 5%);
+        }
+      }
+    }
+  }
+}
